@@ -31,11 +31,12 @@ entry.grid(row = 0, column = 0, columnspan = 4)
 
 button_texts = [
     "C", "(", ")", "bksp",
+    "sin", "cos", "tan", "gr",
     "7", "8", "9", "/",
     "4", "5", "6", "*",
     "1", "2", "3", "-",
     "0", ".", "pi", "+",
-    "gr", "^", "=",
+    "^", "=",
 ]
 
 row, col = 1, 0
@@ -43,7 +44,7 @@ buttons = {}
 
 for text in button_texts:
     if text == "=":
-        column_span = 2
+        column_span = 3
     else:
         column_span = 1
     button = Button(root, text=text, padx=30, pady=20, font=("Helvetica", 16))
